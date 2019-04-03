@@ -1,17 +1,27 @@
+
+var wordRay =[];
+
 function abcCheck(word) {
+  wordRay.push(word);
   var letters = /^[a-zA-Z]+$/.test(word);
   if (letters === true) {
-    alert(word)
-    if (word === "A" || word === "E" || word === "I" || word === "O" || word === "U"|| word === "a" || word === "e" || word === "i" || word === "o" || word === "u") {
-      word = word.concat("ay");
-      alert (word)
-    } else if (word !== "a"){
-      alert("not a vowel")
-    }
-
-  } else {
-    alert("Please enter letters only");
-    return word
+  var vowels = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"]
+  var firstLetter = word.charAt(0)
+  alert(vowels)
+  alert(firstLetter)
+  if (vowels.includes(firstLetter)) {
+      word = word.concat("ay")
+      alert(word) }
+  //     word = word.concat("ay");
+  //   if word.charAt(0.includes(vowels) {
+  //     word = word.concat("ay");
+  //     alert (word)
+  //   } else if (word.charAt(0).includes(vowels) === false){
+  //     alert("first letter is not a vowel")
+  //   }
+  // } else {
+  //   alert("Please enter letters only");
+  //   return word
   }
 }
 
