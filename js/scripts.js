@@ -8,47 +8,38 @@ function abcCheck(word) {
   if (letters === true) {
     var vowels = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U", "y", "Y"];
     var y = ["y", "Y"]
+    var queue = ["qu" || "QU" || "qU" || "Qu"]
     var firstLetter = word.charAt(0);
+    if (word.includes(queue)=== true) {
+      var qULocation = word.search(queue);
+        newQu1 = word.slice(0, qULocation+2)
+        newQu2 = word.slice((qULocation+2), word.length)
+        word = newQu2.concat(newQu1);
+      alert(word)
+
+    }
 
     if (vowels.includes(firstLetter)) {
       //if (vowel first occurence = 0)
       return word.concat("ay");
+
     } else if ((vowels.includes(firstLetter) === false)|| word.charAt(0) === y) {
-      //alert("first letter is not a vowel");
+      alert("first letter is not a vowel");
       for (i = 0; i < word.length; i++) {
-        //console.log(word[i]);
         if (vowels.includes(word[i])) {
           var slicePartOne = word.slice(0, i);
           var slicePartTwo = word.slice(i);
           concatWord = slicePartTwo.concat(slicePartOne);
           return concatWord.concat("ay");
-
-
-
-            // $(word).append(word[i]);
-            // console.log(word)
-
-          //var slicedLetters = word.length
-          // var slicedWord = word.slice(i);
-          // var splicedWord = slicedWord.concat();
-          // alert(splicedWord);
-        console.log("it's a vowel");
       }
-      }
-          //var slicedLetter = word.slice[i];
-        }
-      //
-      // alert("alert3");
-      // word = word.concat(slicedLetter);
-      // word = word.concat("ay");
-      // return word;
-      // alert("alert2");
-
+    }
+  }
   } else {
     alert("Please enter letters only");
     return word;
-  }
-}
+  }//else
+}//letters if
+
 
 
 
