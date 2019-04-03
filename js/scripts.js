@@ -6,13 +6,14 @@ function abcCheck(word) {
   var letters = /^[a-zA-Z]+$/.test(word);
 
   if (letters === true) {
-    var vowels = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"];
+    var vowels = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U", "y", "Y"];
+    var y = ["y", "Y"]
     var firstLetter = word.charAt(0);
 
     if (vowels.includes(firstLetter)) {
       //if (vowel first occurence = 0)
       return word.concat("ay");
-    } else if (vowels.includes(firstLetter) === false) {
+    } else if ((vowels.includes(firstLetter) === false)|| word.charAt(0) === y) {
       //alert("first letter is not a vowel");
       for (i = 0; i < word.length; i++) {
         //console.log(word[i]);
