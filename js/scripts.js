@@ -11,8 +11,7 @@ function abcCheck(word) {
 
     if (vowels.includes(firstLetter)) {
       //if (vowel first occurence = 0)
-      word = word.concat("ay");
-      return word;
+      return word.concat("ay");
     } else if (vowels.includes(firstLetter) === false) {
       //alert("first letter is not a vowel");
       for (i = 0; i < word.length; i++) {
@@ -20,8 +19,8 @@ function abcCheck(word) {
         if (vowels.includes(word[i])) {
           var slicePartOne = word.slice(0, i);
           var slicePartTwo = word.slice(i);
-          word = slicePartTwo.concat(slicePartOne);
-          alert(word);
+          concatWord = slicePartTwo.concat(slicePartOne);
+          return concatWord.concat("ay");
 
 
 
