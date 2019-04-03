@@ -4,18 +4,24 @@ var wordRay =[];
 function abcCheck(word) {
   // wordRay.push(word);
   var letters = /^[a-zA-Z]+$/.test(word);
+
   if (letters === true) {
-    var vowels = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"]
-    var firstLetter = word.charAt(0)
+    var vowels = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"];
+    var firstLetter = word.charAt(0);
+
     if (vowels.includes(firstLetter)) {
-      word = word.concat("ay")
-      return word
+      word = word.concat("ay");
+      return word;
     } else if (vowels.includes(firstLetter) === false){
-      alert("first letter is not a vowel")
+      alert("first letter is not a vowel");
+      word = word.concat("ay");
+      return word;
+      //add "ay" to consonants
     }
+
   } else {
     alert("Please enter letters only");
-    return word
+    return word;
   }
 }
 
