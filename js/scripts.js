@@ -10,14 +10,39 @@ function abcCheck(word) {
     var firstLetter = word.charAt(0);
 
     if (vowels.includes(firstLetter)) {
+      //if (vowel first occurence = 0)
       word = word.concat("ay");
       return word;
-    } else if (vowels.includes(firstLetter) === false){
-      alert("first letter is not a vowel");
-      word = word.concat("ay");
-      return word;
-      //add "ay" to consonants
-    }
+    } else if (vowels.includes(firstLetter) === false) {
+      //alert("first letter is not a vowel");
+      for (i = 0; i < word.length; i++) {
+        //console.log(word[i]);
+        if (vowels.includes(word[i])) {
+          var slicePartOne = word.slice(0, i);
+          var slicePartTwo = word.slice(i);
+          word = slicePartTwo.concat(slicePartOne);
+          alert(word);
+
+
+
+            // $(word).append(word[i]);
+            // console.log(word)
+
+          //var slicedLetters = word.length
+          // var slicedWord = word.slice(i);
+          // var splicedWord = slicedWord.concat();
+          // alert(splicedWord);
+        console.log("it's a vowel");
+      }
+      }
+          //var slicedLetter = word.slice[i];
+        }
+      //
+      // alert("alert3");
+      // word = word.concat(slicedLetter);
+      // word = word.concat("ay");
+      // return word;
+      // alert("alert2");
 
   } else {
     alert("Please enter letters only");
