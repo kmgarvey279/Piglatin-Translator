@@ -2,7 +2,7 @@ function abcCheck(word) {
   var letters = /^[a-zA-Z]+$/.test(word);
   if (letters === true) {
     alert(word)
-    if (word === "a" || word === "e" || word === "i" || word === "o" || word === "u") {
+    if (word === "A" || word === "E" || word === "I" || word === "O" || word === "U"|| word === "a" || word === "e" || word === "i" || word === "o" || word === "u") {
       word = word.concat("ay");
       alert (word)
     } else if (word !== "a"){
