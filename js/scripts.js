@@ -13,12 +13,10 @@ function abcCheck(word) {
         newQu1 = word.slice(0, qULocation+2)
         newQu2 = word.slice((qULocation+2), word.length)
         word = newQu2.concat(newQu1);
-      alert(word)
     }
     if (vowels.includes(firstLetter)) {
       return word.concat("ay");
     } else if ((vowels.includes(firstLetter) === false)|| word.charAt(0) === y) {
-      alert("first letter is not a vowel");
       for (i = 0; i < word.length; i++) {
         if (vowels.includes(word[i])) {
           var slicePartOne = word.slice(0, i);
