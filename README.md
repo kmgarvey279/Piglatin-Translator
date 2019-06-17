@@ -13,7 +13,7 @@
 
 * _The program will take a string as input._
 * _If the inputted string contains non-letter characters, it will return an error message._
-* _Otherwise it will return the translated word. 
+* _Otherwise it will return the translated word._ 
 
 ## Known Bugs
 
